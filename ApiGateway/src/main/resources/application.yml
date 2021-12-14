@@ -1,0 +1,19 @@
+server.port: 8050
+spring:
+
+  cloud:
+    gateway:
+     routes:
+     - id: Owner
+       uri: http://localhost:8081/
+       predicates:
+        - Path=/Owner/**
+     - id: Manager
+       uri: http://localhost:8082/
+       predicates:
+       - Path=/Manager/**
+     - id: Receptionist
+       uri: http://localhost:8083/
+       predicates:
+       - Path=/Receptionist/**
+
