@@ -1,0 +1,19 @@
+package com.StaffMicroservice.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.StaffMicroservice.Model.Staff;
+public interface Staffservice {
+
+	Staff addEmp(Staff emp);
+
+	List<Staff> getAllEmp();
+
+	Optional<Staff> getEmp(long parseLong);
+
+	Staff updateEmp(Staff emp);
+
+	String deleteEmp(long parseLong);
+
+}
